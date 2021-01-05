@@ -15,6 +15,6 @@ console.log({
 
     persona:persona
 });
-const persona2={...persona};
+const persona2={...persona};//se hace una copia clon
 persona2.nombre='Peter';
 console.log(persona2);

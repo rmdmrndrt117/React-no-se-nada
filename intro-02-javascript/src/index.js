@@ -1,26 +1,14 @@
-const personajes=['goku','vegeta','trunks'];
+import { heroes } from "./data/heroes";
 
-/*console.log(personajes[0]);
-console.log(personajes[1]);
-console.log(personajes[2]);*/
-const [ , ,p3]=personajes;
+//import {heroes}from './data/heroes'
+//console.table(heroes);
 
-console.log(p3);
+/*const getHeroebyID=(id)=>{
+    return heroes.find(heroes=>heroes.id===id)
+}*/
+const getHeroebyID=(id)=>heroes.find(heroes=>heroes.id===id)
+     
+console.log(getHeroebyID(5));
 
-const arreglo=()=>{
-    return [`abc`,123];
-}
-const [letras,numeros]=arreglo();
-console.table(letras,numeros);
-//tarea 
-//1.el primer valor del arr se llamara nombre
-//2.el segundo se llamara nombre2
-const state=(valor)=>{
-    return [valor,()=>{console.log('hola mundo')}];
-}
-
-//const arr=state('goku');
-const [nombre,nombre2]=state('goku');
-
-console.log(nombre);
-nombre2();
+const getHeroesbyOwer=(owner)=>heroes.filter(heroes=>heroes.owner===owner);
+console.log(getHeroesbyOwer('Marvel'));

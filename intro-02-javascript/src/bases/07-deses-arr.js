@@ -1,26 +1,29 @@
-const personajes=['goku','vegeta','trunks'];
+//Desestructuración de Arreglos
 
-/*console.log(personajes[0]);
-console.log(personajes[1]);
-console.log(personajes[2]);*/
-const [ , ,p3]=personajes;
+const personajes = ['Goku','Vegeta','Trunks'];
 
-console.log(p3);
+const [ , , p3 ] = personajes;
 
-const arreglo=()=>{
-    return [`abc`,123];
-}
-const [letras,numeros]=arreglo();
-console.table(letras,numeros);
-//tarea 
-//1.el primer valor del arr se llamara nombre
-//2.el segundo se llamara nombre2
-const state=(valor)=>{
-    return [valor,()=>{console.log('hola mundo')}];
+console.log( p3 );
+
+const retornaArreglo = () =>{
+    return ['ABC',123];
 }
 
-//const arr=state('goku');
-const [nombre,nombre2]=state('goku');
+const [letras,numero] = retornaArreglo();
 
-console.log(nombre);
-nombre2();
+console.log(letras,numero);
+
+//Tarea
+//1. el primer valor del arreglo se llamará nombre
+//2. se llamará obtenerNombre
+const state = ( valor ) =>{
+    return [valor, ()=>{console.log('Hola Mundo')}];
+}
+
+//const arr = state('Goku');
+
+const [nombre,obtenerNombre] = state('Goku');
+
+console.log( nombre );
+obtenerNombre();
